@@ -1,0 +1,101 @@
+.container h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    padding-top: 5%;
+}
+
+.game-container{
+    max-width: 972.3px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.game-container h2{
+    display: block;
+    margin: 30px;
+    text-align: center;
+}
+
+.slide-container{
+    position: relative;
+}
+
+.mySlides{
+    display: none;
+    width: 100%;
+}
+
+.mySlides img{
+    width: 100%;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slide dot */
+
+.dot-container{
+   display: flex;
+   justify-content: center;
+}
+
+.dot{
+    border-radius: 50%;
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    margin: 0 5px;
+    align-items: center;
+    
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* Game Description */
+.decription{
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.download-game{
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}

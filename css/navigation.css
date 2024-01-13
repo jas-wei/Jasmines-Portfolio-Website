@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif; /*sans-serif is backup*/
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(41, 54, 11);
+    color: white;
+}
+
+.container{
+    padding: 10px 10%; /* left and right */
+}
+
+.navigation-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(17, 23, 4, 0.6);
+    width: 100%;
+    z-index: 100;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 30px;
+}
+
+/* .logo{
+    width: 140px;
+} */
+
+.logo2{
+    font-size: 30px;
+}
+
+nav ul li{ /*to specify that we apply the following code to the li in ul in nav*/
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none; /*gets rid of underline*/
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: ''; /*can put elements before and after texts p*/
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute; /*used to specify the positioning method of an element in a document. alsolute means relative to screen*/
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav .fa-bars{
+    display: none; /*makes it not show up*/
+}
+
+nav .fa-xmark{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+
+    nav .fa-xmark{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav .fa-bars{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: rgb(142, 145, 41);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        padding-top: 50px;
+        z-index: 2; /*its like the layer order of the page. higher number is, it will appear ontop. 0 is default*/
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-xmark{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
