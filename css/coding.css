@@ -90,7 +90,7 @@
     margin-top: 20px;
 }
 
-.download-game{
+/* .download-game{
     margin-top: 20px;
     padding: 15px;
     font-size: 18px;
@@ -98,4 +98,35 @@
     border: none;
     font-weight: 700;
     cursor: pointer;
+} */
+
+
+
+/* .video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+} */
+.video-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video-group{
+    width: 80%;
+    display: block;
+    margin-bottom: 5%;
+}
+
+.video-group h2{
+    display: block;
+    margin: 30px;
+    text-align: center;
+}
+
+.video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
