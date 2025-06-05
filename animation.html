@@ -1,72 +1,157 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiblee" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
 
-    <head>
-        <meta charset="UTF-8"> <!--meta gives additional information to search engine and viewers. this charset allows us to use up to 256 different characters-->
-        <meta http-equiv="X-UA-Compatiblee" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--makes website look good on all devices-->
-        <title>
-            Animations
-        </title>
-        <link rel="stylesheet" href="css/navigation.css"> <!--to reference our css code-->
-        <link rel="stylesheet" href="css/animation.css"> <!--to reference our css code-->
-        <script src="https://kit.fontawesome.com/2f003e2b89.js" crossorigin="anonymous"></script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
-    </head>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/2f003e2b89.js" crossorigin="anonymous"></script>
 
-    <body>
-        <div id="header">
-            <div class="container">
-                <div class="navigation-bar">
-                    <nav> <!--defines a set of navigation links-->
-                        <p class="logo2"> J A S M I N E </p>
-                        <ul id="sidemenu"> <!--navigation bar-->
-                            <li><a href="index.html"> Home </a></li> <!--ordered link list-->
-                            <li><a href="coding.html"> Coding </a></li> <!--can jump to headers on website-->
-                            <li><a href="art.html"> Art </a></li> 
-                            <li><a href="animation.html"> Animation </a></li>
-                            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                        </ul>
-                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                    </nav>
-                </div>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap only for carousel -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Your original styles -->
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+    <!-- Custom carousel overrides -->
+    <style>
+
+
+    .carousel-frame {
+        position: relative;
+        width: 100%;
+        max-width: 960px; /* this is half of 1920 to keep it nicely responsive */
+        aspect-ratio: 16 / 9;
+        background-color: black;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-media {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="navigation-bar">
+                <nav>
+                    <p class="logo2"> J A S M I N E </p>
+                    <ul id="sidemenu">
+                        <li><a href="index.html"> Home </a></li>
+                        <li><a href="coding.html"> Game Dev </a></li>
+                        <li><a href="art.html"> Art </a></li>
+                        <li><a href="animation.html"> Animation </a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
             </div>
         </div>
+    </div>
 
-<!----------animations---------->
-        <div id="animations">
-            <div class="container">
-                <h1> Animations </h1>
-                <div class="video-container">
-                    <div class="video-group">
-                        <h2> Gone Fishing </h2>
-                        <video class="video" controls src="videos\Untitled video - Made with Clipchamp (1).mp4"></video>
+    <!----------animations---------->
+    <div id="animations">
+        <div class="container">
+            <h1>Animations</h1>
+            <div class="video-container">
+                <div class="video-group">
+                    <h2>Gone Fishing</h2>
+                    <p style=" margin: 30px auto;">
+                        Animation project for ART260 in collaboration with Toby Quon Legault. 
+                        I created the animation, background, and designed one of the characters, while he mixed 
+                        the audio and designed the other character.
+
+                        <br><br>
+
+                        Press arrows to view concept art.
+                    </p>
+                    <!-- Carousel -->
+                    <div id="projectCarousel" class="carousel slide" data-bs-ride="false">
+                        
+                        <div class="carousel-inner">
+
+                            <!-- First slide: animation video -->
+                            <div class="carousel-item active">
+                                <div class="carousel-frame">
+                                    <video class="carousel-media" controls>
+                                        <source src="videos/leviathan/GoneFishing.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <!-- Second slide -->
+                            <div class="carousel-item">
+                                <div class="carousel-frame">
+                                    <img src="videos/leviathan/Sketch.png" class="carousel-media" alt="Sketch 1">
+                                </div>
+                            </div>
+
+                            <!-- Third slide -->
+                            <div class="carousel-item">
+                                <div class="carousel-frame">
+                                    <img src="videos/leviathan/Selfie.png" class="carousel-media" alt="Sketch 2">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Carousel controls -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        </button>
                     </div>
-                    <div class="video-group">
-                        <h2> 2024 Demo Reel </h2>
-                        <video class="video" controls src="videos/demo2024.mp4"></video>
-                    </div>
-                    <!-- <div class="video-group">
-                        <h2> Ink Fight </h2>
-                        <video class="video" controls src="videos/fight_scene.mp4"></video>
-                    </div>
-                    <div class="video-group">
-                        <h2> Altan </h2>
-                        <video class="video" controls src="videos/lip_sync_test.mp4"></video>
-                    </div> -->
-                    <div class="video-group">
-                        <h2> Blender Sculpt </h2>
-                        <video class="video" controls src="videos/jasmine_wei_personal_artwork2.mp4"></video>
-                    </div>
+                </div>
+ 
+
+                <!-- The rest of your videos -->
+                <div class="video-group">
+                    <h2>Whitepine Animatic</h2>
+                    <p style=" margin: 30px auto;">
+                        Animatic of a scene from IvoryTV's Minecraft series <em>Whitepine</em>.
+                    </p>
+                    <video class="video" controls src="videos/Whitepine.mp4"></video>
+                </div>
+
+                <div class="video-group">
+                    <h2>2023-2024 Demo Reel</h2>
+                    <p style=" margin: 30px auto;">
+                        A collection of animations made from 2023-2024!
+                    </p>
+                    <video class="video" controls src="videos/demo2024.mp4"></video>
                 </div>
 
             </div>
-        </div>  
-        <script src="js/script.js"></script>  
-    </body>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

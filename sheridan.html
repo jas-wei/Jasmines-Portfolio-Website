@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <meta charset="UTF-8"> <!--meta gives additional information to search engine and viewers. this charset allows us to use up to 256 different characters-->
+        <meta http-equiv="X-UA-Compatiblee" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--makes website look good on all devices-->
+        <title>
+            Art
+        </title>
+        <link rel="stylesheet" href="css/navigation.css"> <!--to reference our css code-->
+        <link rel="stylesheet" href="css/art.css">
+        <script src="https://kit.fontawesome.com/2f003e2b89.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="navigation-bar">
+                    <nav> <!--defines a set of navigation links-->
+                        <p class="logo2"> J A S M I N E </p>
+                        <ul id="sidemenu"> <!--navigation bar-->
+                            <li><a href="index.html"> Home </a></li> <!--ordered link list-->
+                            <li><a href="coding.html"> Game Dev </a></li> <!--can jump to headers on website-->
+                            <li><a href="sheridan.html"> Sheridan Portfolio </a></li> 
+                            <li><a href="art.html"> Art </a></li> 
+                            <li><a href="animation.html"> Animation </a></li>
+                            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+<!----------art---------->
+
+        <div id="art">
+            <div class="container">
+                <h1> Sheridan Portfolio </h1>
+
+                <p> This is my 2023 Portfolio for Sheridan's Bachelor of Animation Program (Canada's #1 animation school). 
+                    The cut-off for that year was 90%, and I got 89%. I learned a lot about animation,
+                     character design, and layout design from this experience. Hope you enjoy my work!</p>
+
+                <div class="work-container">
+                    <h2> Figures Drawing </h2>
+                    <div class="flex-group">
+                        <div class="work"><img src="images/portfolio//figures/jasmine_wei_figure_drawing1.jpeg"></div>
+                        <div class="work"><img src="images/portfolio//figures/jasmine_wei_figure_drawing2.jpeg"></div>
+                        <div class="work"><img src="images/portfolio//figures/jasmine_wei_figure_drawing3.jpeg"></div>
+                        <div class="work"><img src="images/portfolio//figures/jasmine_wei_figure_drawing4.jpeg"></div>
+                    </div>
+                </div>
+                
+                <div class="work-container">
+                    <h2> Hands </h2>
+                    <div class="flex-group">
+                        <div class="work"><img src="images/portfolio/hands/jasmine_wei_hand_drawing1.jpeg"></div>
+                        <div class="work"><img src="images/portfolio/hands/jasmine_wei_hand_drawing2.jpeg"></div>
+                    </div>
+                </div>
+
+                <div class="work-container">
+                    <h2> Character Rotation </h2>
+                    <div class="flex-group">
+                        <div class="big-work"><img src="images/portfolio/jasmine_wei_character_rotation1.png"></div>
+                    </div>
+                </div>
+
+                <div class="work-container">
+                    <h2> Animation </h2>
+                    <div class="flex-group">
+                        <video class="big-work" style="border-radius: 10px;" controls src="images/portfolio/jasmine_wei_short_animation1.mp4"></video>
+                    </div>
+                </div>
+
+                <div class="work-container">
+                    <h2> Storyboard </h2>
+                    <div class="flex-group">
+                        <div class="big-work"><img src="images/portfolio/jasmine_wei_storyboarding1.png"></div>
+                    </div>
+                </div>
+
+                <div class="work-container">
+                    <h2> Layouts </h2>
+                    <div class="flex-group">
+                        <div class="work"><img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png"></div>
+                        <div class="work"><img src="images/portfolio/jasmine_wei_perspective_line_drawing2.png"></div>
+                    </div>
+                </div>
+                
+                <div class="popup-work">
+                    <span> <i class="fa-solid fa-xmark"></i></span> 
+                    <img src="#">
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/art.js"></script>
+        
+    <body>
+</html>
+

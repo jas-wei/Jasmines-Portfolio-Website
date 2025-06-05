@@ -33,19 +33,24 @@ html{
 
 .work-list{
      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*each column of grid is >= 250px and <= 1fr*/
+     grid-template-columns: repeat(2, 1fr);
      grid-gap: 40px;
      margin-top: 50px;
 }
 
-.work{
+.work {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    height: 300px; /* you can adjust the height you want */
 }
 
-.work img{
+
+.work img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -124,7 +129,7 @@ html{
 }
 
 .contact-left p i{
-    color: rgb(142, 145, 41);
+    color: rgb(178, 182, 68);
     margin-right: 15px;
     font-size: 25px;
 }
@@ -137,13 +142,13 @@ html{
     text-decoration: none;
     font-size: 40px;
     margin-right: 15px;
-    color: rgb(142, 145, 41);
+    color: rgb(178, 182, 68);
     display: inline-block;
     transition: 0.5s;
 }
 
 .social-icons a:hover {
-    color: rgb(142, 145, 41);
+    color: rgb(181, 185, 77);
     transform: translateY(-5px);
 }
 
@@ -153,7 +158,7 @@ html{
     margin: 15px;
     margin-top: 20px;
     width: fit-content;
-    border: 1px solid rgb(142, 145, 41);
+    border: 1px solid rgb(178, 182, 68);
     padding: 14px 60px;
     border-radius: 6px;
     cursor: pointer;
@@ -168,7 +173,7 @@ html{
 
 .btn:hover{
     background: white;
-    color: rgb(142, 145, 41);
+    color: rgb(181, 185, 77);
 }
 
 .contact-right form{

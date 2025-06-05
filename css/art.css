@@ -1,15 +1,33 @@
-
-
 /* --------visdev-------- */
 
-.container h1{
+.container h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 700;
     padding-top: 5%;
+    margin-bottom: 60px;
 }
 
-.big-work{
+/* Section containers clearer and visually separated */
+.work-container {
+    margin: 80px 0;
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container .work-container h2 {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 36px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.big-work {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,61 +36,63 @@
     padding-bottom: 20px;
 }
 
-.big-work img{
+.big-work img {
     height: 100%;
     width: 100%;
     border-radius: 20px;
-    max-width: 972.306px;
+    max-width: 972px;
 }
 
-.flex-group{
+.big-work video {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    max-width: 972px;
+}
+
+.flex-group {
     display: flex;
-    /* flex-wrap: wrap; */
-    gap: 20px;
+    flex-wrap: nowrap;  /* key change */
     justify-content: center;
+    gap: 20px;
     padding: 20px 10%;
 }
 
-.container .work-container h2 {
-    display: block;
-    margin: 30px;
-    text-align: center;
-}
-
-.container .work-container .work{
-    height: 305px;
-    width: 305px;
+.container .work-container .work {
+    flex: 1 1 0;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-    display: block;
+    height: 300px; /* adjust as you like */
 }
 
-.container .work-container .work img{
+.container .work-container .work img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 0.5s;
 }
 
-.container .work-container .work:hover img{
+.container .work-container .work:hover img {
     transform: scale(1.05);
 }
 
-.popup-work{
-    position: fixed;   /* stays in place even if scrolled; */
+/* Popup styling unchanged */
+.popup-work {
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, .9);
     z-index: 100;
-    display:none;
+    display: none;
 }
 
-.popup-work img{
+.popup-work img {
     position: absolute;
-    top: 50%; /* to center its position; */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 850px;
@@ -81,7 +101,7 @@
     z-index: inherit;
 }
 
-.popup-work span{
+.popup-work span {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -90,9 +110,8 @@
     font-size: 30px;
 }
 
-@media (max-width:768px){
-    .popup-work img{
+@media (max-width: 768px) {
+    .popup-work img {
         width: 95%;
     }
-
 }

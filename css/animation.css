@@ -1,30 +1,43 @@
-.container h1{
+.container h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 700;
     padding-top: 5%;
+    margin-bottom: 60px;
 }
 
-.video-container{
+/* Apply nice separation to each video section */
+.video-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1400px;
 }
 
-.video-group{
-    width: 80%;
-    display: block;
-    margin-bottom: 5%;
+/* Individual video blocks now visually separated */
+.video-group {
+    width: 100%;
+    /* margin: 80px 0; */
+    padding: 40px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.video-group h2{
+.video-group h2 {
     display: block;
-    margin: 30px;
+    margin-bottom: 30px;
     text-align: center;
+    font-size: 36px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
 }
 
-.video{
+.video {
     width: 100%;
     height: 100%;
     border-radius: 20px;
