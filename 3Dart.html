@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+
+<html>
+    <head>
+        <meta charset="UTF-8"> <!--meta gives additional information to search engine and viewers. this charset allows us to use up to 256 different characters-->
+        <meta http-equiv="X-UA-Compatiblee" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--makes website look good on all devices-->
+        <title>
+            Art
+        </title>
+        <link rel="stylesheet" href="css/navigation.css"> <!--to reference our css code-->
+        <link rel="stylesheet" href="css/art.css">
+        <script src="https://kit.fontawesome.com/2f003e2b89.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <div class="navigation-bar">
+                    <nav> <!--defines a set of navigation links-->
+                        <p class="logo2"> J A S M I N E </p>
+                        <ul id="sidemenu"> <!--navigation bar-->
+                            <li><a href="index.html"> Home </a></li> <!--ordered link list-->
+                            <li><a href="coding.html"> Game Dev </a></li> <!--can jump to headers on website-->
+                            <li><a href="sheridan.html"> Sheridan Portfolio </a></li> 
+                            <li><a href="art.html"> Art </a></li> 
+                            <li><a href="animation.html"> Animation </a></li>
+                            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                        </ul>
+                        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+<!----------art---------->
+
+        <div id="art">
+            <div class="container">
+                <h1> Artworks </h1>
+
+                <div class="work-container">
+                    <h2> Rendered Paintings </h2>
+                    <p style="width: 75%; margin: 30px auto;">
+                        Rendered pieces showcasing my understanding of lighting, anatomy, and composition
+                    </p>
+
+                    <div class="flex-group">
+                        <div class="work"><img src="images/Rendered/Rendered/Untitled_Artwork(1).png"></div>
+                        <div class="work"><img src="images/Rendered/Rendered/woodland_train.png"></div>
+                        <div class="work"><img src="images/Rendered/Rendered/Untitled_Artwork.png"></div>
+                        <div class="work"><img src="images/oblivion.png"></div>
+                    </div>
+                </div>
+
+                <div class="work-container">
+                    <h2> GhostTide </h2>
+                    <p style="width: 75%; margin: 20px auto;">
+                         Concept art for <em>GhostTide</em>, a first-person shooter featuring futuristic 
+                         underwater tactical units. I began by drafting character silhouettes
+                          with clear shape language, then selected my favorite sketch to refine 
+                          into the final design.
+                    </p>
+                    <div class="flex-group">
+                        <div class="work"><img src="images/GhostTide/GT2.png"></div>
+                        <div class="work"><img src="images/GhostTide/GT1.png"></div>
+                        <div class="work"><img src="images/GhostTide/GT3.png"></div>
+                    </div>
+                </div>
+                
+
+                <div class="work-container">
+                    <h2> Robot Roundup </h2>
+                    <p style="width: 75%; margin: 30px auto;">
+                        Character lineup created for the game <em>Robot Roundup</em>, a remastered version of <em>ChuChu Rocket!</em>. 
+                        The second image shows the characters in action on the selection screen (UI by Alexander Ross).
+                    </p>
+
+                    <div class="big-work"><img src="images/RobotRoundup/Robot roundup/Untitled_Artwork 1.png"></div>
+                    <div class="big-work"><img src="images/RobotRoundup/New_RR_UI_Test.png"></div>
+                </div>
+
+                <div class="work-container">
+                    <h2> We're Smart </h2>
+                    <p style="width: 75%; margin: 30px auto;">
+                        Character lineup commissioned by Chill Studioez for their TV show, <em>We're Smart</em>. 
+                        This is an action/slice-of-life show telling a story about Boris and his theiving alterego Jack the Reaper.
+                    </p>
+
+                    <div class="big-work"><img src="images/Untitled_Artwork (17).png"></div>
+                </div>
+
+                <div class="work-container">
+                    <h2> When Embers Fall </h2>
+                    <p style="width: 75%; margin: 30px auto;">
+                        Visual development project for the story concept <em>When Embers Fall</em>. 
+                        The narrative follows a farmer infected by a parasitic sprite that drains their life force,
+                        but also grants the ability to fight shadow creatures. The project includes a character lineup, 
+                        layout designs, an expression sheet, and a painted emotional beat.
+                    </p>
+
+                    <div class="big-work"><img src="images/Untitled_Artwork.png"></div>
+                    <div class="flex-group">
+                        <div class="work"><img src="images/bg01.png"></div>
+                        <div class="work"><img src="images/Untitled_Artwork 2(1).png"></div>
+                        <div class="work"><img src="images/Untitled_Artwork 2.png"></div>
+                    </div>
+                </div>
+
+                <div class="work-container">
+                    <h2> Environments </h2>
+                    <p style="width: 75%; margin: 30px auto;">
+                        Environment studies and painted backgrounds created for various projects and animation work.
+                    </p>
+
+                    <div class="flex-group">
+                        <div class="work"><img src="images/Rendered/Rendered/Untitled_Artwork(4).png"></div>
+                        <div class="work"><img src="images/City_Design_1.png"></div>
+                        <div class="work"><img src="images/Rendered/Rendered/Bg.png"></div>
+                    </div>
+                </div>
+                
+                <div class="popup-work">
+                    <span> <i class="fa-solid fa-xmark"></i></span> 
+                    <img src="#">
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/art.js"></script>
+        
+    <body>
+</html>
+

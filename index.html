@@ -15,7 +15,7 @@
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     </head>
 
@@ -27,17 +27,18 @@
                         <p class="logo2"> J A S M I N E </p>
                         <ul id="sidemenu"> <!--navigation bar-->
                             <li><a href="index.html"> Home </a></li> <!--ordered link list-->
-                            <li><a href="coding.html"> Game Dev </a></li> <!--can jump to headers on website-->
-                            <li><a href="sheridan.html"> Sheridan Portfolio </a></li> 
-                            <li><a href="art.html"> Art </a></li> 
-                            <li><a href="animation.html"> Animation </a></li>
+                            <li><a href="#gamedev">Game Dev</a></li>
+                            <li><a href="#vfx">VFX</a></li>
+                            <li><a href="#art2d">2D Art</a></li>
+                            <li><a href="#art3d">3D Art</a></li>
                             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                         </ul>
                         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                     </nav>
                 </div>
                 <div class="header-text">
-                    <h1> Game Dev and Art Portfolio </h1>
+                    <h1> Jasmine Wei </h1>
+                    <h2> Technical Artist & Game Developer </h2>
                 </div>
             </div>
         </div>
@@ -46,46 +47,94 @@
 
         <div id="portfolio">
             <div class="container">
-                <h1 class="sub-title"> My Work </h1>
+                <!-- <h1 class="sub-title"> My Work </h1> -->
                 <div class="work-list">
-                    <div class="work">
-                        <img src="images/Screenshot 2025-03-11 212414.png">
-                        <div class="layer">
-                            <h3> Game Dev </h3>
-                            <p> See Games from school projects and game jams (featuring my programming and art)</p>
-                            <a href="coding.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                    <div class="work-entry" id="gamedev">
+                        <h2>Game Dev</h2>
+                        <div class="work">
+                            <a href="coding.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>Game Dev</h3></div>
+                            </a>
+
+                            <a href="coding.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>Game Dev</h3></div>
+                            </a>
+
+                            <a href="coding.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>Game Dev</h3></div>
+                            </a>
                         </div>
                     </div>
 
+                    <div class="work-entry" id="vfx">
+                        <h2>VFX</h2>
+                        <div class="work">
+                            <a href="vfx.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>VFX</h3></div>
+                            </a>
 
-                    <div class="work">
-                        <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
-                        <div class="layer">
-                            <h3> Sheridan Animation </h3>
-                            <p> See my 2023 portfolio for Sheridan's Bachelor of Animation Program </p>
-                            <a href="art.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <!--<a> is hyperlink-->
+                            <a href="vfx.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>VFX</h3></div>
+                            </a>
+
+                            <a href="vfx.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>VFX</h3></div>
+                            </a>
+
+                            <a href="vfx.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>VFX</h3></div>
+                            </a>
                         </div>
-                        
                     </div>
 
-                    <div class="work">
-                        <img src="images/GhostTide/GT1.png">
-                        <div class="layer">
-                            <h3> Art </h3>
-                            <p> See personal visual development work, digital paintings, environments, and more </p>
-                            <a href="art.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> <!--<a> is hyperlink-->
+                    <div class="work-entry" id="art2d">
+                        <h2>2D Art</h2>
+                        <div class="work">
+                            <a href="2Dart.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>2D Art</h3></div>
+                            </a>
+
+                            <a href="2Dart.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>2D Art</h3></div>
+                            </a>
+
+                            <a href="2Dart.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>2D Art</h3></div>
+                            </a>
                         </div>
-                        
                     </div>
-                    <div class="work">
-                        <img src="images/Screenshot 2025-03-11 212750.png">
-                        <div class="layer">
-                            <h3> Animations </h3>
-                            <p> See various short animations made from Procreate, Blendr, ToonBoom Harmony, and Procreate Dreams</p>
-                            <a href="animation.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                    <div class="work-entry" id="art3d">
+                        <h2>3D Art</h2>
+                        <div class="work">
+                            <a href="3Dart.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>3D Art</h3></div>
+                            </a>
+
+                            <a href="3Dart.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>3D Art</h3></div>
+                            </a>
+
+                            <a href="3Dart.html">
+                                <img src="images/portfolio/jasmine_wei_perspective_line_drawing1.png">
+                                <div class="layer"><h3>3D Art</h3></div>
+                            </a>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -104,14 +153,14 @@
                         </div>
                         <!-- <a href="#" class="btn"> Download CV </a> -->
                     </div>
-                    <div class="contact-right">
+                    <!-- <div class="contact-right">
                         <form>
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="text" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn"> Submit </button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

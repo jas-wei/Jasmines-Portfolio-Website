@@ -2,12 +2,26 @@ html{
     scroll-behavior: smooth;
 }
 
-#header{ /*use # when taling about an id, not class*/
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h2, h3, p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+
+#header {
     width: 100%;
-    height: 100vh;
-    background-image: url("../images/WoodlandTrain.png");
+    height: 80vh;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("../images/FinalImageRender2.png");
     background-size: cover;
     background-position: center;
+    letter-spacing: 3px;
 }
 
 .header-text{
@@ -19,11 +33,11 @@ html{
 .header-text h1{
     display: inline-block;
     font-size: 60px;
-    /* background-color: rgba(20,51,6,0.4); */
-    background-color: rgb(17, 23, 4, 0.6);
+
     padding: 20px;
     border-radius: 20px;
     margin: 0 auto;
+    /* font-weight: 700; */
 }
 
 /* ----------portfolio---------- */
@@ -32,84 +46,72 @@ html{
 }
 
 .work-list{
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-gap: 40px;
-     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers horizontally */
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.work-entry{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    scroll-margin-top: 120px;
+
+}
+
+.work-entry h2{
+    text-align: center;
 }
 
 .work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    height: 300px; /* you can adjust the height you want */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
 }
-
 
 .work img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    object-position: center;
     border-radius: 10px;
-    display: block;
     transition: transform 0.5s;
 }
 
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.255), rgba(0, 0, 0, 0.749));
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+.work img:hover {
+    transform: scale(1.05);
+}
 
+.work a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
 }
 
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a{
-    margin-top: 20px;
+.layer h3 {
     color: white;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: rgb(41, 54, 11);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    transition: 0.5s;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
-.work:hover img{
-    transform: scale(1.1);
+.work a:hover .layer {
+    opacity: 1;
 }
-
-.work:hover .layer{
-    height: 100%;
-
-}
-
-.layer a:hover{
-    background-color: white;
-    color: rgb(41, 54, 11);
-}
-
 /* ----------contact---------- */
 
 .row{
@@ -194,21 +196,42 @@ form input, form textarea{
 
 /* ----------css for small screen---------- */
 
-@media only screen and (max-width:600px){
-    #header{
-        background-image: url(../images/WoodlandTrain.png); /*choose different picture*/
+@media only screen and (max-width: 600px) {
+    #header {
+        width: 100%;
+        height: 70vh;
+        background-image:
+            linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+            url("../images/FinalImageRender2.png");
+        background-size: cover;
+        background-position: center;
     }
 
-    .header-text{
-        margin-top: 100%;
+    .header-text {
+        margin-top: 35%;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
         text-align: center;
     }
 
-    nav ul{
+    .header-text h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        padding: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .header-text h2 {
+        font-size: 16px;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        padding: 0 10px;
+    }
+
+    nav ul {
         background: rgb(142, 145, 41);
         position: fixed;
         top: 0;
@@ -216,29 +239,98 @@ form input, form textarea{
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-        z-index: 2; /*its like the layer order of the page. higher number is, it will appear ontop. 0 is default*/
+        z-index: 2;
         transition: right 0.5s;
     }
 
-    nav ul li{
+    nav ul li {
         display: block;
         margin: 25px;
     }
 
-    nav ul .fa-xmark{
+    nav ul .fa-xmark {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
 
-    /* nav .fa-bars{
-        position: absolute;
-        top: 15px;
-        right: 25px;
-    } */
+    .work-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-top: 30px;
+    }
 
-    .row{
+    .work-entry {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .work-entry h3 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .work {
+        width: 100%;
+        height: 220px;
+    }
+
+    .work img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .layer {
+        padding: 0 20px;
+        font-size: 13px;
+    }
+
+    .layer h3 {
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+
+    .layer a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+    }
+
+    .row {
         display: block;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .contact-left p {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 32px;
+        margin-right: 12px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        margin: 10px 0;
+        font-size: 16px;
+        box-sizing: border-box;
     }
 }
